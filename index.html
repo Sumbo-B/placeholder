@@ -561,10 +561,66 @@
         }
       }
 
+      /* ─── LANGUAGE TOGGLE (mobile only) ─── */
+      .lang-toggle {
+        display: none;
+      }
+
       /* ─── MOBILE / TABLET ─── */
       @media (max-width: 820px) {
         body {
           background: var(--cream);
+        }
+
+        /* Language toggle: visible on mobile, hides inactive column */
+        .lang-toggle {
+          display: inline-flex;
+          position: fixed;
+          top: 12px;
+          right: 12px;
+          z-index: 100;
+          background: var(--red);
+          border: none;
+          border-radius: 999px;
+          padding: 0;
+          font-family: "Playfair Display", serif;
+          font-size: 12px;
+          font-weight: 600;
+          letter-spacing: 1px;
+          color: white;
+          box-shadow: 0 4px 12px rgba(122, 16, 16, 0.3);
+          overflow: hidden;
+          cursor: pointer;
+        }
+        .lang-toggle .lang-opt {
+          padding: 8px 14px;
+          background: transparent;
+          color: rgba(255, 255, 255, 0.55);
+          transition: background 0.2s, color 0.2s;
+        }
+        .lang-toggle .lang-opt.active {
+          background: rgba(255, 255, 255, 0.18);
+          color: white;
+        }
+
+        body[data-lang="en"] [data-lang="yo"] {
+          display: none;
+        }
+        body[data-lang="yo"] [data-lang="en"] {
+          display: none;
+        }
+
+        /* When one column is hidden, the remaining one fills */
+        body[data-lang] .two-col {
+          grid-template-columns: 1fr;
+        }
+        body[data-lang] .col-divider {
+          display: none;
+        }
+        body[data-lang] .col + .col {
+          margin-top: 0;
+          padding-top: 0;
+          border-top: none;
         }
 
         .page {
@@ -775,7 +831,11 @@
       }
     </style>
   </head>
-  <body>
+  <body data-lang="en">
+    <button class="lang-toggle" type="button" aria-label="Switch language">
+      <span class="lang-opt active" data-set-lang="en">EN</span
+      ><span class="lang-opt" data-set-lang="yo">YO</span>
+    </button>
     <!-- ══════════════════════════════════════════
      PAGE 1 — COVER
 ══════════════════════════════════════════ -->
@@ -1041,7 +1101,7 @@
         </div>
       </div>
       <div class="two-col" style="padding-top: 2mm">
-        <div class="col">
+        <div class="col" data-lang="en">
           <div class="col-title">ORDER OF SERVICE</div>
           <div class="service-item">
             <span class="service-num">1.</span
@@ -1141,7 +1201,7 @@
           </div>
         </div>
         <div class="col-divider"></div>
-        <div class="col">
+        <div class="col" data-lang="yo">
           <div class="col-title">ETO ISIN</div>
           <div class="service-item">
             <span class="service-num">1.</span
@@ -1275,7 +1335,7 @@
         </div>
       </div>
       <div class="two-col">
-        <div class="col">
+        <div class="col" data-lang="en">
           <div class="hymn-title">1. Processional Hymn – G.H.B.93</div>
           <div class="hymn-subtitle">To God Be the Glory</div>
           <div class="hymn-verse">
@@ -1312,7 +1372,7 @@
           </div>
         </div>
         <div class="col-divider"></div>
-        <div class="col">
+        <div class="col" data-lang="yo">
           <div class="hymn-title">1. ORIN AKOWOLE-1.0.1.93</div>
           <div class="hymn-subtitle">OGONI F'OLUWA TO OHUNNLA</div>
           <div class="hymn-verse">
@@ -1380,7 +1440,7 @@
         </div>
       </div>
       <div class="two-col">
-        <div class="col">
+        <div class="col" data-lang="en">
           <div class="hymn-title">2. OPENING HYMN - G.H.B 510</div>
           <div class="hymn-subtitle">(THE VOICE THAT BREATHED O'ER EDEN)</div>
           <div class="hymn-verse">
@@ -1445,7 +1505,7 @@
           </div>
         </div>
         <div class="col-divider"></div>
-        <div class="col">
+        <div class="col" data-lang="yo">
           <div class="hymn-title">2. ORINIBERE ISIN - G.H.B 510</div>
           <div class="hymn-subtitle">(IRE TA SUN NI EDEN)</div>
           <div class="hymn-verse">
@@ -1540,7 +1600,7 @@
         </div>
       </div>
       <div class="two-col">
-        <div class="col">
+        <div class="col" data-lang="en">
           <div class="hymn-title" style="margin-bottom: 2mm">
             3. OPENING PRAYER <br />
             <br />
@@ -1589,7 +1649,7 @@
           </div>
         </div>
         <div class="col-divider"></div>
-        <div class="col">
+        <div class="col" data-lang="yo">
           <div class="hymn-title" style="margin-bottom: 2mm">
             3. ADURA <br />
             <br />
@@ -1672,7 +1732,7 @@
         </div>
       </div>
       <div class="two-col">
-        <div class="col">
+        <div class="col" data-lang="en">
           <div class="section-heading">6. DECLARATION</div>
           <div class="instruction">
             Pastor's question to the person to be married
@@ -1723,7 +1783,7 @@
           </div>
         </div>
         <div class="col-divider"></div>
-        <div class="col">
+        <div class="col" data-lang="yo">
           <div class="section-heading">6. IBEERE ATIIDAHUN PELU IJEWO</div>
           <div class="instruction">(Ni idide duro Oko Ataya)</div>
           <div class="instruction">
@@ -1807,7 +1867,7 @@
         </div>
       </div>
       <div class="two-col">
-        <div class="col">
+        <div class="col" data-lang="en">
           <div class="section-heading">7. The Vows</div>
           <div class="instruction">
             (The Pastor shall cause the groom to hold the bride with his right
@@ -1884,7 +1944,7 @@
           </div>
         </div>
         <div class="col-divider"></div>
-        <div class="col">
+        <div class="col" data-lang="yo">
           <div class="section-heading">7. Isowopo ati Ibukun (Sise Adehun)</div>
           <div class="instruction">
             Olusoaguntan yio fa obinrin naa le okunrin na lowo. Okunrin yi o fi
@@ -1988,7 +2048,7 @@
         </div>
       </div>
       <div class="two-col">
-        <div class="col">
+        <div class="col" data-lang="en">
           <div class="hymn-title">Closing Hymn – GHB Various 13</div>
           <div class="hymn-subtitle">God Give Us Christian Homes</div>
           <div class="hymn-verse">
@@ -2029,7 +2089,7 @@
           </div>
         </div>
         <div class="col-divider"></div>
-        <div class="col">
+        <div class="col" data-lang="yo">
           <div class="hymn-title">Orin Ipari Isin – Oniruru 13</div>
           <div class="hymn-subtitle">Fun wa ni'le Kristiani</div>
           <div class="hymn-verse">
@@ -2100,7 +2160,7 @@
         </div>
       </div>
       <div class="two-col">
-        <div class="col">
+        <div class="col" data-lang="en">
           <div class="hymn-title">Recessional Hymn – GHB 627</div>
           <div class="hymn-subtitle">My Hope is Built on Nothing Less</div>
           <div class="hymn-verse">
@@ -2141,7 +2201,7 @@
           </div>
         </div>
         <div class="col-divider"></div>
-        <div class="col">
+        <div class="col" data-lang="yo">
           <div class="hymn-title">Orin Akojade – I.O.I.627</div>
           <div class="hymn-subtitle">Igbagbo mi duro l'ori</div>
           <div class="hymn-verse">
@@ -2288,6 +2348,38 @@
           if (el.dataset.case === "upper") value = value.toUpperCase();
           el.textContent = value;
         });
+      })();
+
+      // Language toggle
+      (function () {
+        var body = document.body;
+        var toggle = document.querySelector(".lang-toggle");
+        if (!toggle) return;
+        var stored = null;
+        try {
+          stored = localStorage.getItem("programme-lang");
+        } catch (e) {}
+        if (stored === "en" || stored === "yo") setLang(stored);
+
+        toggle.addEventListener("click", function (e) {
+          var target = e.target.closest("[data-set-lang]");
+          if (!target) {
+            // Toggle when clicking the pill background
+            setLang(body.dataset.lang === "en" ? "yo" : "en");
+            return;
+          }
+          setLang(target.dataset.setLang);
+        });
+
+        function setLang(lang) {
+          body.dataset.lang = lang;
+          toggle.querySelectorAll(".lang-opt").forEach(function (opt) {
+            opt.classList.toggle("active", opt.dataset.setLang === lang);
+          });
+          try {
+            localStorage.setItem("programme-lang", lang);
+          } catch (e) {}
+        }
       })();
     </script>
   </body>
