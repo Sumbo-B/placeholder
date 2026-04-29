@@ -576,31 +576,52 @@
         .lang-toggle {
           display: inline-flex;
           position: fixed;
-          top: 12px;
-          right: 12px;
+          bottom: 18px;
+          right: 18px;
           z-index: 100;
           background: var(--red);
           border: none;
           border-radius: 999px;
-          padding: 0;
+          padding: 4px;
           font-family: "Playfair Display", serif;
           font-size: 12px;
           font-weight: 600;
-          letter-spacing: 1px;
+          letter-spacing: 1.5px;
           color: white;
-          box-shadow: 0 4px 12px rgba(122, 16, 16, 0.3);
-          overflow: hidden;
+          box-shadow: 0 6px 20px rgba(122, 16, 16, 0.4);
           cursor: pointer;
+          transition: opacity 0.45s ease, transform 0.45s ease;
+        }
+        .lang-toggle .lang-knob {
+          position: absolute;
+          top: 4px;
+          left: 4px;
+          width: calc(50% - 4px);
+          height: calc(100% - 8px);
+          background: rgba(255, 255, 255, 0.24);
+          border-radius: 999px;
+          transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+          pointer-events: none;
+        }
+        body[data-lang="yo"] .lang-toggle .lang-knob {
+          transform: translateX(100%);
         }
         .lang-toggle .lang-opt {
-          padding: 8px 14px;
+          position: relative;
+          z-index: 1;
+          padding: 7px 13px;
           background: transparent;
-          color: rgba(255, 255, 255, 0.55);
-          transition: background 0.2s, color 0.2s;
+          color: rgba(255, 255, 255, 0.6);
+          transition: color 0.35s ease;
         }
         .lang-toggle .lang-opt.active {
-          background: rgba(255, 255, 255, 0.18);
           color: white;
+        }
+
+        /* Fade out toggle while user is scrolling */
+        body.is-scrolling .lang-toggle {
+          opacity: 0.18;
+          transform: scale(0.92) translateY(4px);
         }
 
         body[data-lang="en"] [data-lang="yo"] {
@@ -608,6 +629,41 @@
         }
         body[data-lang="yo"] [data-lang="en"] {
           display: none;
+        }
+
+        /* Thanos snap: blur + dissolve out, then materialize back in */
+        @keyframes snapOut {
+          0% {
+            opacity: 1;
+            filter: blur(0) saturate(1);
+            transform: translateY(0) scale(1);
+          }
+          100% {
+            opacity: 0;
+            filter: blur(10px) saturate(0.3);
+            transform: translateY(-14px) scale(1.04);
+          }
+        }
+        @keyframes snapIn {
+          0% {
+            opacity: 0;
+            filter: blur(10px) saturate(0.3);
+            transform: translateY(14px) scale(0.96);
+          }
+          100% {
+            opacity: 1;
+            filter: blur(0) saturate(1);
+            transform: translateY(0) scale(1);
+          }
+        }
+        body[data-lang="en"].snapping-out [data-lang="en"],
+        body[data-lang="yo"].snapping-out [data-lang="yo"] {
+          animation: snapOut 0.42s
+            cubic-bezier(0.55, 0.08, 0.68, 0.53) forwards;
+        }
+        body[data-lang="en"].snapping-in [data-lang="en"],
+        body[data-lang="yo"].snapping-in [data-lang="yo"] {
+          animation: snapIn 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
         /* When one column is hidden, the remaining one fills */
@@ -833,6 +889,7 @@
   </head>
   <body data-lang="en">
     <button class="lang-toggle" type="button" aria-label="Switch language">
+      <span class="lang-knob" aria-hidden="true"></span>
       <span class="lang-opt active" data-set-lang="en">EN</span
       ><span class="lang-opt" data-set-lang="yo">YO</span>
     </button>
@@ -2350,36 +2407,73 @@
         });
       })();
 
-      // Language toggle
+      // Language toggle with Thanos-snap transition + scroll fade
       (function () {
         var body = document.body;
         var toggle = document.querySelector(".lang-toggle");
         if (!toggle) return;
+
+        // Restore stored preference (no animation on initial load)
         var stored = null;
         try {
           stored = localStorage.getItem("programme-lang");
         } catch (e) {}
-        if (stored === "en" || stored === "yo") setLang(stored);
+        if (stored === "en" || stored === "yo") {
+          body.dataset.lang = stored;
+          syncButton(stored);
+        }
 
+        var animating = false;
         toggle.addEventListener("click", function (e) {
+          if (animating) return;
           var target = e.target.closest("[data-set-lang]");
-          if (!target) {
-            // Toggle when clicking the pill background
-            setLang(body.dataset.lang === "en" ? "yo" : "en");
-            return;
-          }
-          setLang(target.dataset.setLang);
+          var next = target
+            ? target.dataset.setLang
+            : body.dataset.lang === "en"
+            ? "yo"
+            : "en";
+          setLang(next);
         });
 
         function setLang(lang) {
-          body.dataset.lang = lang;
+          if (body.dataset.lang === lang) return;
+          animating = true;
+          syncButton(lang); // pill knob slides immediately
+
+          body.classList.add("snapping-out");
+          window.setTimeout(function () {
+            body.classList.remove("snapping-out");
+            body.dataset.lang = lang;
+            body.classList.add("snapping-in");
+            try {
+              localStorage.setItem("programme-lang", lang);
+            } catch (e) {}
+            window.setTimeout(function () {
+              body.classList.remove("snapping-in");
+              animating = false;
+            }, 560);
+          }, 420);
+        }
+
+        function syncButton(lang) {
           toggle.querySelectorAll(".lang-opt").forEach(function (opt) {
             opt.classList.toggle("active", opt.dataset.setLang === lang);
           });
-          try {
-            localStorage.setItem("programme-lang", lang);
-          } catch (e) {}
         }
+
+        // Fade toggle while scrolling, restore after a short idle window
+        var scrollTimer;
+        window.addEventListener(
+          "scroll",
+          function () {
+            body.classList.add("is-scrolling");
+            window.clearTimeout(scrollTimer);
+            scrollTimer = window.setTimeout(function () {
+              body.classList.remove("is-scrolling");
+            }, 650);
+          },
+          { passive: true }
+        );
       })();
     </script>
   </body>
