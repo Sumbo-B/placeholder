@@ -1,0 +1,2082 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order of Programme – Oluwaseyi Olaonipekun & Olasumbo Bello</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --red: #7a1010;
+        --red-mid: #9b1b1b;
+        --red-light: #b83232;
+        --cream: #faf6f0;
+        --text: #2a1a1a;
+      }
+
+      body {
+        background: #d0c8bc;
+        font-family: "EB Garamond", serif;
+        color: var(--text);
+      }
+
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        background: var(--cream);
+        margin: 20px auto;
+        position: relative;
+        overflow: hidden;
+        page-break-after: always;
+      }
+
+      /* ─── COVER PAGE ─── */
+      .cover {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 24mm 16mm;
+        background: var(--cream);
+      }
+
+      .cover-header {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: 14mm 0 0;
+      }
+
+      .couple-header-name {
+        font-family: "Great Vibes", cursive;
+        color: var(--red);
+        font-size: 22px;
+        line-height: 1.2;
+        text-align: right;
+      }
+
+      .rings-svg {
+        position: absolute;
+        top: 6mm;
+        right: 18mm;
+        width: 52px;
+        opacity: 0.85;
+      }
+
+      .order-label {
+        font-family: "Playfair Display", serif;
+        color: var(--red);
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 2px;
+        margin-top: 8mm;
+        text-align: center;
+      }
+
+      .for-the {
+        font-family: "EB Garamond", serif;
+        color: var(--red);
+        font-size: 15px;
+        letter-spacing: 1px;
+        text-align: center;
+        margin-top: 1mm;
+      }
+
+      .solemnization {
+        font-family: "Playfair Display", serif;
+        color: var(--red);
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.15;
+        text-align: center;
+        margin-top: 4mm;
+      }
+
+      .between-label {
+        font-family: "EB Garamond", serif;
+        color: var(--red);
+        font-size: 15px;
+        letter-spacing: 2px;
+        margin-top: 5mm;
+        text-align: center;
+      }
+
+      .bride-name {
+        font-family: "Great Vibes", cursive;
+        color: var(--red);
+        font-size: 54px;
+        line-height: 1.1;
+        text-align: center;
+        margin-top: 2mm;
+      }
+
+      .ampersand-circle {
+        width: 44px;
+        height: 44px;
+        background: var(--red);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 3mm auto;
+      }
+
+      .ampersand-circle span {
+        font-family: "Great Vibes", cursive;
+        color: white;
+        font-size: 26px;
+        line-height: 1;
+        padding-top: 2px;
+      }
+
+      .groom-name {
+        font-family: "Great Vibes", cursive;
+        color: var(--red);
+        font-size: 54px;
+        line-height: 1.1;
+        text-align: center;
+      }
+
+      .date-line {
+        font-family: "Playfair Display", serif;
+        color: var(--red);
+        font-size: 13px;
+        letter-spacing: 1px;
+        text-align: center;
+        margin-top: 4mm;
+      }
+
+      .venue-line {
+        font-family: "EB Garamond", serif;
+        font-size: 12px;
+        color: var(--text);
+        text-align: center;
+        margin-top: 1mm;
+        line-height: 1.5;
+      }
+
+      .time-line {
+        font-family: "Playfair Display", serif;
+        color: var(--red);
+        font-size: 12px;
+        letter-spacing: 1px;
+        text-align: center;
+        margin-top: 1mm;
+      }
+
+      .cover-staff {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 7mm;
+        padding: 0 4mm;
+      }
+
+      .staff-col {
+        flex: 1;
+        text-align: center;
+      }
+
+      .staff-name {
+        font-family: "Playfair Display", serif;
+        color: var(--red);
+        font-size: 11px;
+        font-weight: 600;
+      }
+
+      .staff-role {
+        font-family: "EB Garamond", serif;
+        font-size: 10px;
+        color: var(--text);
+      }
+
+      .cover-pastors {
+        width: 100%;
+        margin-top: 6mm;
+        padding: 0 4mm;
+      }
+
+      .pastor-block {
+        text-align: center;
+        margin-bottom: 3mm;
+      }
+
+      .pastor-name {
+        font-family: "Playfair Display", serif;
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--text);
+        letter-spacing: 0.5px;
+      }
+
+      .pastor-title {
+        font-family: "EB Garamond", serif;
+        font-size: 11px;
+        color: var(--text);
+      }
+
+      .officiating-label {
+        font-family: "Playfair Display", serif;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text);
+        text-align: center;
+        margin-top: 2mm;
+      }
+
+      .page-number {
+        position: absolute;
+        bottom: 10mm;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 24px;
+        height: 24px;
+        background: var(--red);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "EB Garamond", serif;
+        font-size: 11px;
+        color: white;
+      }
+
+      /* ─── INNER PAGE HEADER ─── */
+      .inner-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6mm 14mm 4mm;
+        border-bottom: 0.5px solid #c8b8a8;
+        margin-bottom: 4mm;
+      }
+
+      .inner-header-name {
+        font-family: "Great Vibes", cursive;
+        color: var(--red);
+        font-size: 16px;
+        line-height: 1.2;
+      }
+
+      .inner-rings {
+        width: 36px;
+        opacity: 0.7;
+      }
+
+      /* ─── OFFICIATING MINISTERS PAGE ─── */
+      .ministers-page {
+        padding: 0 14mm 14mm;
+      }
+
+      .page-title {
+        font-family: "Great Vibes", cursive;
+        color: var(--red);
+        font-size: 46px;
+        text-align: center;
+        margin-bottom: 8mm;
+      }
+
+      .minister-item {
+        display: flex;
+        margin-bottom: 4mm;
+      }
+
+      .minister-num {
+        font-family: "Playfair Display", serif;
+        font-size: 12px;
+        color: var(--red);
+        min-width: 18px;
+        font-weight: 600;
+      }
+
+      .minister-info {
+        flex: 1;
+      }
+
+      .minister-name {
+        font-family: "Playfair Display", serif;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--red);
+      }
+
+      .minister-church {
+        font-family: "EB Garamond", serif;
+        font-size: 12px;
+        color: var(--text);
+      }
+
+      /* ─── ORDER OF SERVICE ─── */
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 0.5px 1fr;
+        column-gap: 6mm;
+        padding: 0 10mm;
+      }
+
+      .col-divider {
+        background: #c8b8a8;
+        width: 0.5px;
+        justify-self: center;
+      }
+
+      .col {
+        padding: 0;
+        min-width: 0;
+      }
+
+      .col-title {
+        font-family: "Playfair Display", serif;
+        color: var(--red);
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: 2px;
+        margin-bottom: 4mm;
+        padding-bottom: 2mm;
+        border-bottom: 0.5px solid #c8b8a8;
+      }
+
+      .service-item {
+        display: flex;
+        margin-bottom: 2.5mm;
+        align-items: flex-start;
+      }
+
+      .service-num {
+        font-family: "Playfair Display", serif;
+        font-size: 12px;
+        color: var(--red);
+        min-width: 22px;
+        font-weight: 600;
+      }
+
+      .service-text {
+        font-family: "EB Garamond", serif;
+        font-size: 12px;
+        color: var(--text);
+        line-height: 1.4;
+      }
+
+      .service-text em {
+        font-style: italic;
+        color: var(--red-mid);
+      }
+
+      /* ─── HYMN PAGES ─── */
+      .hymn-page {
+        padding: 0 14mm 14mm;
+      }
+
+      .hymn-title {
+        font-family: "Playfair Display", serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--red);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 1mm;
+        padding-bottom: 1mm;
+        border-bottom: 0.5px solid #c8b8a8;
+      }
+
+      .hymn-subtitle {
+        font-family: "Playfair Display", serif;
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--red);
+        margin-bottom: 3mm;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .hymn-verse {
+        margin-bottom: 3mm;
+      }
+
+      .verse-num {
+        font-family: "Playfair Display", serif;
+        font-size: 11px;
+        color: var(--red);
+        font-weight: 600;
+      }
+
+      .verse-lines {
+        font-family: "EB Garamond", serif;
+        font-size: 12px;
+        color: var(--text);
+        line-height: 1.55;
+      }
+
+      .chorus {
+        font-family: "EB Garamond", serif;
+        font-size: 12px;
+        color: var(--text);
+        font-style: italic;
+        line-height: 1.55;
+        margin: 2mm 0 3mm 4mm;
+      }
+
+      /* ─── DECLARATION / VOWS PAGES ─── */
+      .declaration-page {
+        padding: 0 14mm 14mm;
+      }
+
+      .section-heading {
+        font-family: "Playfair Display", serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--red);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 5mm 0 2mm;
+      }
+
+      .subsection-heading {
+        font-family: "Playfair Display", serif;
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--text);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin: 3mm 0 1.5mm;
+      }
+
+      .body-text {
+        font-family: "EB Garamond", serif;
+        font-size: 12px;
+        color: var(--text);
+        line-height: 1.6;
+        margin-bottom: 2mm;
+      }
+
+      .vow-text {
+        font-family: "EB Garamond", serif;
+        font-size: 12px;
+        color: var(--text);
+        line-height: 1.6;
+        margin-bottom: 2mm;
+        font-style: italic;
+      }
+
+      .instruction {
+        font-family: "EB Garamond", serif;
+        font-size: 11.5px;
+        color: #666;
+        font-style: italic;
+        line-height: 1.5;
+        margin-bottom: 1.5mm;
+      }
+
+      .answer-text {
+        font-family: "Playfair Display", serif;
+        font-size: 12px;
+        font-style: italic;
+        color: var(--text);
+        margin-bottom: 2mm;
+      }
+
+      /* ─── PHOTOGRAPH PAGE ─── */
+      .photo-page {
+        padding: 0 14mm 14mm;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 220mm;
+      }
+
+      .photo-title {
+        font-family: "Great Vibes", cursive;
+        color: var(--red);
+        font-size: 52px;
+        text-align: center;
+        margin-bottom: 8mm;
+      }
+
+      .photo-label {
+        font-family: "EB Garamond", serif;
+        font-size: 13px;
+        color: var(--text);
+        text-align: center;
+        margin-bottom: 4mm;
+      }
+
+      .photo-list {
+        list-style: none;
+        text-align: center;
+      }
+
+      .photo-list li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 2.5mm;
+        font-family: "EB Garamond", serif;
+        font-size: 13px;
+        color: var(--text);
+      }
+
+      .photo-list li .pnum {
+        font-family: "Playfair Display", serif;
+        color: var(--red);
+        font-size: 12px;
+        font-weight: 600;
+        min-width: 22px;
+        text-align: right;
+      }
+
+      /* watermark background pattern */
+      .bg-watermark {
+        position: absolute;
+        inset: 0;
+        opacity: 0.04;
+        background-image: repeating-linear-gradient(
+          45deg,
+          var(--red) 0,
+          var(--red) 1px,
+          transparent 0,
+          transparent 50%
+        );
+        background-size: 12px 12px;
+        pointer-events: none;
+      }
+
+      @media print {
+        body {
+          background: white;
+        }
+        .page {
+          margin: 0;
+          box-shadow: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ══════════════════════════════════════════
+     PAGE 1 — COVER
+══════════════════════════════════════════ -->
+    <div class="page cover">
+      <div class="bg-watermark"></div>
+
+      <!-- Rings SVG -->
+      <svg
+        class="rings-svg"
+        viewBox="0 0 80 55"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="27"
+          cy="27"
+          r="22"
+          stroke="#7A1010"
+          stroke-width="5"
+          fill="none"
+        />
+        <circle
+          cx="53"
+          cy="27"
+          r="22"
+          stroke="#7A1010"
+          stroke-width="5"
+          fill="none"
+          opacity="0.7"
+        />
+        <path
+          d="M30 10 Q40 2 50 10"
+          stroke="#7A1010"
+          stroke-width="2"
+          fill="none"
+        />
+        <circle cx="40" cy="7" r="3" fill="#B83232" />
+      </svg>
+
+      <div class="cover-header">
+        <div class="couple-header-name">
+          <span data-name="bride">Oluwaseyi Olaonipekun</span><br />&amp;
+          <span data-name="groom">Olasumbo Bello</span>
+        </div>
+      </div>
+
+      <div class="order-label">Order of Programme</div>
+      <div class="for-the">for the</div>
+
+      <div class="solemnization">Solemnization of<br />Holy Matrimony</div>
+
+      <div class="between-label">Between</div>
+
+      <div class="bride-name" data-name="bride">Oluwaseyi Olaonipekun</div>
+
+      <div class="ampersand-circle"><span>&amp;</span></div>
+
+      <div class="groom-name" data-name="groom">Olasumbo Bello</div>
+
+      <div class="date-line">On Saturday, 2nd May, 2026</div>
+      <div class="venue-line">
+        @ Local Government Staff Training School<br />Secretariat, Agodi, Ibadan
+      </div>
+      <div class="time-line">Time: 11.00am</div>
+
+      <div class="cover-staff" style="margin-top: 9mm">
+        <div class="staff-col">
+          <div class="staff-name">Bro. Ayo Kushimo</div>
+          <div class="staff-role">Church Organist</div>
+          <div style="margin-top: 3mm">
+            <div class="staff-name" style="color: var(--text); font-size: 10px">
+              Evang. Touwo Owoeye
+            </div>
+            <div class="staff-name" style="color: var(--text); font-size: 10px">
+              Evang. Mrs. V. O. Odeleye
+            </div>
+            <div class="staff-name" style="color: var(--text); font-size: 10px">
+              Evang. Olugade Adebayo
+            </div>
+            <div class="staff-name" style="color: var(--text); font-size: 10px">
+              Evang. A. O. Adio
+            </div>
+            <div class="staff-role">Church Evangelists</div>
+          </div>
+        </div>
+        <div class="staff-col">
+          <div class="staff-name">Pastor Jaye Akinkuolie</div>
+          <div class="staff-role">Choir Master</div>
+          <div style="margin-top: 3mm">
+            <div class="staff-name" style="color: var(--text); font-size: 10px">
+              Pastor S. F. Alabi
+            </div>
+            <div class="staff-name" style="color: var(--text); font-size: 10px">
+              Pastor I. O. Opadeji
+            </div>
+            <div class="staff-name" style="color: var(--text); font-size: 10px">
+              Pastor O. M. Oyekunbi
+            </div>
+            <div class="staff-name" style="color: var(--text); font-size: 10px">
+              Pastor T. O. Tawose
+            </div>
+            <div class="staff-role">Assembly Pastors</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cover-pastors">
+        <div class="pastor-block">
+          <div class="pastor-name">PASTOR E. A. ABISOYE (AGS)</div>
+          <div class="pastor-title">Ashi Bodija District Superintendent</div>
+        </div>
+        <div class="pastor-block">
+          <div class="pastor-name">PASTOR M. O. ADEDEJI (AGS)</div>
+          <div class="pastor-title">Chairman, Ibadan DCC 5</div>
+        </div>
+      </div>
+
+      <div class="page-number">01</div>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+     PAGE 2 — OFFICIATING MINISTERS
+══════════════════════════════════════════ -->
+    <div class="page">
+      <div class="bg-watermark"></div>
+      <div class="inner-header">
+        <svg class="inner-rings" viewBox="0 0 80 55" fill="none">
+          <circle
+            cx="27"
+            cy="27"
+            r="22"
+            stroke="#7A1010"
+            stroke-width="5"
+            fill="none"
+          />
+          <circle
+            cx="53"
+            cy="27"
+            r="22"
+            stroke="#7A1010"
+            stroke-width="5"
+            fill="none"
+            opacity="0.7"
+          />
+        </svg>
+        <div class="inner-header-name">
+          <span data-name="bride">Oluwaseyi Olaonipekun</span><br />&amp;
+          <span data-name="groom">Olasumbo Bello</span>
+        </div>
+      </div>
+
+      <div class="ministers-page">
+        <div class="page-title">Officiating Ministers</div>
+
+        <div class="minister-item">
+          <div class="minister-num">1.</div>
+          <div class="minister-info">
+            <div class="minister-name">Pastor M. O. Adedeji (AGS)</div>
+            <div class="minister-church">Chairman, Agbowo, Ibadan DCC5</div>
+          </div>
+        </div>
+        <div class="minister-item">
+          <div class="minister-num">2.</div>
+          <div class="minister-info">
+            <div class="minister-name">Pastor E. A. Abisoye (AGS)</div>
+            <div class="minister-church">
+              CAC Ashi Bodija District Superintendent
+            </div>
+          </div>
+        </div>
+        <div class="minister-item">
+          <div class="minister-num">3.</div>
+          <div class="minister-info">
+            <div class="minister-name">Pastor T. Olu Erinwusi (AGS)</div>
+          </div>
+        </div>
+        <div class="minister-item">
+          <div class="minister-num">4.</div>
+          <div class="minister-info">
+            <div class="minister-name">Pastor S. F. Alabi</div>
+            <div class="minister-church">
+              C.A.C Oke Alafia, No. 2, Osagin, Apete
+            </div>
+          </div>
+        </div>
+        <div class="minister-item">
+          <div class="minister-num">5.</div>
+          <div class="minister-info">
+            <div class="minister-name">Pastor I. O. Opadeji</div>
+            <div class="minister-church">
+              CAC Oke Alafia, No. 3, Odo Oba, Moniya, Ib.
+            </div>
+          </div>
+        </div>
+        <div class="minister-item">
+          <div class="minister-num">6.</div>
+          <div class="minister-info">
+            <div class="minister-name">Pastor O. M. Oyekunbi</div>
+            <div class="minister-church">
+              CAC Oke Alafia, Ashi Bodija, Ibadan
+            </div>
+          </div>
+        </div>
+        <div class="minister-item">
+          <div class="minister-num">7.</div>
+          <div class="minister-info">
+            <div class="minister-name">Pastor Jaye Akinkuolie</div>
+            <div class="minister-church">
+              CAC Ile-Anu, Aroro Makinde, Ibadan
+            </div>
+          </div>
+        </div>
+        <div class="minister-item">
+          <div class="minister-num">8.</div>
+          <div class="minister-info">
+            <div class="minister-name">Evangelist Olugade Adebayo</div>
+            <div class="minister-church">
+              CAC Oke Alafia Ashi Bodija, Ibadan
+            </div>
+          </div>
+        </div>
+        <div class="minister-item">
+          <div class="minister-num">9.</div>
+          <div class="minister-info">
+            <div class="minister-name">Evangelist (Mrs) V. O. Odeleye</div>
+            <div class="minister-church">
+              CAC Oke Alafia, No. 4, Aroro Mogaji, Ibadan
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-number">02</div>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+     PAGE 3 — ORDER OF SERVICE
+══════════════════════════════════════════ -->
+    <div class="page">
+      <div class="bg-watermark"></div>
+      <div class="inner-header">
+        <svg class="inner-rings" viewBox="0 0 80 55" fill="none">
+          <circle
+            cx="27"
+            cy="27"
+            r="22"
+            stroke="#7A1010"
+            stroke-width="5"
+            fill="none"
+          />
+          <circle
+            cx="53"
+            cy="27"
+            r="22"
+            stroke="#7A1010"
+            stroke-width="5"
+            fill="none"
+            opacity="0.7"
+          />
+        </svg>
+        <div class="inner-header-name">
+          <span data-name="bride">Oluwaseyi Olaonipekun</span><br />&amp;
+          <span data-name="groom">Olasumbo Bello</span>
+        </div>
+      </div>
+      <div class="two-col" style="padding-top: 2mm">
+        <div class="col">
+          <div class="col-title">ORDER OF SERVICE</div>
+          <div class="service-item">
+            <span class="service-num">1.</span
+            ><span class="service-text"
+              >Processional Hymn – Hymn 93<br /><em
+                >(To God be the Glory)</em
+              ></span
+            >
+          </div>
+          <div class="service-item">
+            <span class="service-num">2.</span
+            ><span class="service-text"
+              >Opening Hymn GHB 510<br /><em
+                >(The Voice that breathed o'er Eden)</em
+              ></span
+            >
+          </div>
+          <div class="service-item">
+            <span class="service-num">3.</span
+            ><span class="service-text">Opening Prayer</span>
+          </div>
+          <div class="service-item">
+            <span class="service-num">4.</span
+            ><span class="service-text">Scripture Reading</span>
+          </div>
+          <div class="service-item">
+            <span class="service-num">5.</span
+            ><span class="service-text">Announcement</span>
+          </div>
+          <div class="service-item">
+            <span class="service-num">6.</span
+            ><span class="service-text">Declaration</span>
+          </div>
+          <div class="service-item">
+            <span class="service-num">7.</span
+            ><span class="service-text">The Vow</span>
+          </div>
+          <div class="service-item">
+            <span class="service-num">8.</span
+            ><span class="service-text">Receiving the Bible</span>
+          </div>
+          <div class="service-item">
+            <span class="service-num">9.</span
+            ><span class="service-text">Prayer for the Couple</span>
+          </div>
+          <div class="service-item">
+            <span class="service-num">10.</span
+            ><span class="service-text">Warning</span>
+          </div>
+          <div class="service-item">
+            <span class="service-num">11.</span
+            ><span class="service-text"
+              >Choir Ministration – Choir<br /><em
+                >C.A.C. Oke-Alafia, Ashi, Bodija</em
+              ></span
+            >
+          </div>
+          <div class="service-item">
+            <span class="service-num">12.</span
+            ><span class="service-text">Sermon</span>
+          </div>
+          <div class="service-item">
+            <span class="service-num">13.</span
+            ><span class="service-text">Prayer</span>
+          </div>
+          <div class="service-item">
+            <span class="service-num">14.</span
+            ><span class="service-text">Signing of Marriage Certificate</span>
+          </div>
+          <div class="service-item">
+            <span class="service-num">15.</span
+            ><span class="service-text">Announcement/Introduction</span>
+          </div>
+          <div class="service-item">
+            <span class="service-num">16.</span
+            ><span class="service-text">Thanksgiving</span>
+          </div>
+          <div class="service-item">
+            <span class="service-num">17.</span
+            ><span class="service-text"
+              >Closing Hymn – GHB Various 13<br /><em
+                >(God give us Christian Home)</em
+              ></span
+            >
+          </div>
+          <div class="service-item">
+            <span class="service-num">18.</span
+            ><span class="service-text">Benediction</span>
+          </div>
+          <div class="service-item">
+            <span class="service-num">19.</span
+            ><span class="service-text"
+              >Recessional Hymn GHB 627<br /><em
+                >(My hope is built on nothing less)</em
+              ></span
+            >
+          </div>
+        </div>
+        <div class="col-divider"></div>
+        <div class="col">
+          <div class="col-title">ETO ISIN</div>
+          <div class="service-item">
+            <span class="service-num">1.</span
+            ><span class="service-text"
+              >Orin Akowole I.O.I 93<br /><em
+                >(Ogo ni f'Oluwa to se ohun nla)</em
+              ></span
+            >
+          </div>
+          <div class="service-item">
+            <span class="service-num">2.</span
+            ><span class="service-text"
+              >Orin Ibere Isin – I.O.I 510<br /><em
+                >(Ire t'a su ni Eden)</em
+              ></span
+            >
+          </div>
+          <div class="service-item">
+            <span class="service-num">3.</span
+            ><span class="service-text">Adura</span>
+          </div>
+          <div class="service-item">
+            <span class="service-num">4.</span
+            ><span class="service-text">Eko Kika</span>
+          </div>
+          <div class="service-item">
+            <span class="service-num">5.</span
+            ><span class="service-text">Ifilo</span>
+          </div>
+          <div class="service-item">
+            <span class="service-num">6.</span
+            ><span class="service-text">Ibere ati Idahun pelu Ijewo</span>
+          </div>
+          <div class="service-item">
+            <span class="service-num">7.</span
+            ><span class="service-text">Isowopo ati Ibukun (Sise Adehun)</span>
+          </div>
+          <div class="service-item">
+            <span class="service-num">8.</span
+            ><span class="service-text">Gbigba Bibeli</span>
+          </div>
+          <div class="service-item">
+            <span class="service-num">9.</span
+            ><span class="service-text">Adura fun Tokotaya</span>
+          </div>
+          <div class="service-item">
+            <span class="service-num">10.</span
+            ><span class="service-text">Ikilo</span>
+          </div>
+          <div class="service-item">
+            <span class="service-num">11.</span
+            ><span class="service-text"
+              >Orin Adako – Akorin<br /><em
+                >C.A.C. Oke-Alafia, Ashi, Bodija</em
+              ></span
+            >
+          </div>
+          <div class="service-item">
+            <span class="service-num">12.</span
+            ><span class="service-text">Iwaasu</span>
+          </div>
+          <div class="service-item">
+            <span class="service-num">13.</span
+            ><span class="service-text">Adura leyin Iwaasu</span>
+          </div>
+          <div class="service-item">
+            <span class="service-num">14.</span
+            ><span class="service-text">Fifi owo si iwe Eri Igbeyawo</span>
+          </div>
+          <div class="service-item">
+            <span class="service-num">15.</span
+            ><span class="service-text">Ifihan ati Ifilo</span>
+          </div>
+          <div class="service-item">
+            <span class="service-num">16.</span
+            ><span class="service-text">Idupe Igbeyawo</span>
+          </div>
+          <div class="service-item">
+            <span class="service-num">17.</span
+            ><span class="service-text"
+              >Orin Ipari Isin I.O.I Oniruru 13<br /><em
+                >(Fun wa ni'le Kristiani)</em
+              ></span
+            >
+          </div>
+          <div class="service-item">
+            <span class="service-num">18.</span
+            ><span class="service-text">Ore-Ofe</span>
+          </div>
+          <div class="service-item">
+            <span class="service-num">19.</span
+            ><span class="service-text"
+              >Orin Akojade I.O.I. 627<br /><em
+                >(Igbagbo mi duro l'ori)</em
+              ></span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="page-number">03</div>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+     PAGE 4 — PROCESSIONAL HYMN
+══════════════════════════════════════════ -->
+    <div class="page">
+      <div class="bg-watermark"></div>
+      <div class="inner-header">
+        <svg class="inner-rings" viewBox="0 0 80 55" fill="none">
+          <circle
+            cx="27"
+            cy="27"
+            r="22"
+            stroke="#7A1010"
+            stroke-width="5"
+            fill="none"
+          />
+          <circle
+            cx="53"
+            cy="27"
+            r="22"
+            stroke="#7A1010"
+            stroke-width="5"
+            fill="none"
+            opacity="0.7"
+          />
+        </svg>
+        <div class="inner-header-name">
+          <span data-name="bride">Oluwaseyi Olaonipekun</span><br />&amp;
+          <span data-name="groom">Olasumbo Bello</span>
+        </div>
+      </div>
+      <div class="two-col">
+        <div class="col">
+          <div class="hymn-title">1. Processional Hymn – G.H.B.93</div>
+          <div class="hymn-subtitle">To God Be the Glory</div>
+          <div class="hymn-verse">
+            <div class="verse-num">1.</div>
+            <div class="verse-lines">
+              To God be the glory. great things He hath done,<br />So loved He
+              the world that He gave us His Son,<br />Who yielded His life an
+              atonement for sin,<br />And open'd the Life Gate that all may go
+              in.
+            </div>
+            <div class="chorus">
+              Praise the Lord! Praise the Lord! Let the earth hear His voice!<br />Praise
+              the Lord! Praise the Lord! Let the people rejoice!<br />O come to
+              the Father, through Jesus the Son;<br />And give Him the glory!
+              Great things, He hath done!
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">2.</div>
+            <div class="verse-lines">
+              O perfect redemption, the purchase of blood<br />To every believer
+              the promise of God;<br />The vilest offender who truly
+              believes,<br />That moment from Jesus a pardon received.
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">3.</div>
+            <div class="verse-lines">
+              Great things He hath taught us, great things He hath done,<br />And
+              great our rejoicing through Jesus the Son<br />But purer, and
+              higher, and greater will be<br />Our wonder, our transport when
+              Jesus we see. <br />Amen.
+            </div>
+          </div>
+        </div>
+        <div class="col-divider"></div>
+        <div class="col">
+          <div class="hymn-title">1. ORIN AKOWOLE-1.0.1.93</div>
+          <div class="hymn-subtitle">OGONI F'OLUWA TO OHUNNLA</div>
+          <div class="hymn-verse">
+            <div class="verse-num">1.</div>
+            <div class="verse-lines">
+              Ogo ni f'Oluwa to se ohun nla<br />Ife lo mu k'o fun wa ni omo
+              Re,<br />Enit'O femi Re lele f'ese wa<br />To si silekun iye sile
+              fun wa.
+            </div>
+            <div class="chorus">
+              Yin Oluwa, Yin Oluwa, F'iyin fun Oluwa,<br />Yin Oluwa, Yin Oluwa,
+              E yo niwaju Re,<br />K'ato Baba wa lo l'Oruko Jesu,<br />Jek'a jo
+              fogo fun Onise yanu.
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">2.</div>
+            <div class="verse-lines">
+              Irapada kikun ti eje Re ra<br />F'enikeni to gba ileri Re gbo,<br />Enit'o
+              buruju b'o bale gbagbo<br />Lojukanna y'o ri idariji gba.
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">3.</div>
+            <div class="verse-lines">
+              O s'ohun nla fun wa, O da wa l'ola<br />Ayo wa di kikun ninu Omo
+              Re<br />Ogo ati ewa irapada yi<br />Y'o ya wa lenu ‘gbat'a ba ri
+              Jesu.<br />
+              Amin.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-number">04</div>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+     PAGE 5 — OPENING HYMN
+══════════════════════════════════════════ -->
+    <div class="page">
+      <div class="bg-watermark"></div>
+      <div class="inner-header">
+        <svg class="inner-rings" viewBox="0 0 80 55" fill="none">
+          <circle
+            cx="27"
+            cy="27"
+            r="22"
+            stroke="#7A1010"
+            stroke-width="5"
+            fill="none"
+          />
+          <circle
+            cx="53"
+            cy="27"
+            r="22"
+            stroke="#7A1010"
+            stroke-width="5"
+            fill="none"
+            opacity="0.7"
+          />
+        </svg>
+        <div class="inner-header-name">
+          <span data-name="bride">Oluwaseyi Olaonipekun</span><br />&amp;
+          <span data-name="groom">Olasumbo Bello</span>
+        </div>
+      </div>
+      <div class="two-col">
+        <div class="col">
+          <div class="hymn-title">2. OPENING HYMN - G.H.B 510</div>
+          <div class="hymn-subtitle">(THE VOICE THAT BREATHED O'ER EDEN)</div>
+          <div class="hymn-verse">
+            <div class="verse-num">1.</div>
+            <div class="verse-lines">
+              The voice that breathed o'er Eden<br />That earliest
+              wedding-day.<br />The primal marriage blessing<br />It hath not
+              passed away
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">2.</div>
+            <div class="verse-lines">
+              Still in the pure espousal<br />Of Christian man and maid<br />The
+              Holy Three are with us,<br />The threefold grace is said.
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">3.</div>
+            <div class="verse-lines">
+              For dower of blessed children,<br />For love and faith's sweet
+              sake<br />For high mysterious union<br />Which nought on earth may
+              break.
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">4.</div>
+            <div class="verse-lines">
+              Be present, heav’nly Father<br />To give away this bride,<br />As
+              Eve Thou gav'st to Adam<br />Out of his own pierced side
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">5.</div>
+            <div class="verse-lines">
+              Be present, gracious Saviour<br />To join their loving hands<br />As
+              Thou didst bind two natures in<br />Thine eternal bands
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">6.</div>
+            <div class="verse-lines">
+              Be present, Holy Spirit<br />To bless them as they kneel<br />As
+              Thou for Christ the Bridegroom<br />The heav'nly spouse dost seal
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">7.</div>
+            <div class="verse-lines">
+              O spread Thy pure wings o'er them!<br />Let no ill pow'r find
+              place,<br />When onward through life's journey<br />The hallow'd
+              path they trace
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">8.</div>
+            <div class="verse-lines">
+              To cast their crowns before Thee<br />In perfect sacrifice<br />Till
+              to the home of gladness<br />With Christ’s own bride they rise.<br />
+              Amen.
+            </div>
+          </div>
+        </div>
+        <div class="col-divider"></div>
+        <div class="col">
+          <div class="hymn-title">2. ORINIBERE ISIN - G.H.B 510</div>
+          <div class="hymn-subtitle">(IRE TA SUN NI EDEN)</div>
+          <div class="hymn-verse">
+            <div class="verse-num">1.</div>
+            <div class="verse-lines">
+              Ire t’a su ni Eden<br />Nigbeyawo ‘kini;<br />Ibukun ta bukun
+              won<br />O wa sibe-sibe
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">2.</div>
+            <div class="verse-lines">
+              Sibe titi di oni<br />N’igbeyawo Kristiani;<br />Olorun wa l’arin
+              wa<br />Lati sure fun wa.
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">3.</div>
+            <div class="verse-lines">
+              Ire ki won le ma bi<br />Ki won ko si ma re;<br />Ki won ni ‘dapo
+              mimo<br />T’enikan k’yo le tu.
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">4.</div>
+            <div class="verse-lines">
+              Ba wa pe, Baba orun,<br />F’obinrin yi f’oko;<br />Bi O ti fi Efa
+              fun<br />Adam l’ojo ‘kini
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">5.</div>
+            <div class="verse-lines">
+              Ba wa pe, Immanuel;<br />Si so owo won po;<br />B'eda meji ti
+              papo<br />L'ara ijinle Re
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">6.</div>
+            <div class="verse-lines">
+              Ba wa pe, Emi mimo:<br />F'ibukun Re fun won;<br />Si se won ni
+              asepe<br />Gege b'O ti ma nse.
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">7.</div>
+            <div class="verse-lines">
+              Fi won s'a be abo Re<br />K'ibi kan ma ba won;<br />'Gba won npara
+              ile Re<br />Ma toju okan won.
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">8.</div>
+            <div class="verse-lines">
+              Pelu won loj'aye won<br />At'oko at'aya;<br />Titi won o d'odo
+              Re<br />N’ile ayo l'orun.<br />Amin.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-number">05</div>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+     PAGE 6 — ANNOUNCEMENT / DECLARATION
+══════════════════════════════════════════ -->
+    <div class="page">
+      <div class="bg-watermark"></div>
+      <div class="inner-header">
+        <svg class="inner-rings" viewBox="0 0 80 55" fill="none">
+          <circle
+            cx="27"
+            cy="27"
+            r="22"
+            stroke="#7A1010"
+            stroke-width="5"
+            fill="none"
+          />
+          <circle
+            cx="53"
+            cy="27"
+            r="22"
+            stroke="#7A1010"
+            stroke-width="5"
+            fill="none"
+            opacity="0.7"
+          />
+        </svg>
+        <div class="inner-header-name">
+          <span data-name="bride">Oluwaseyi Olaonipekun</span><br />&amp;
+          <span data-name="groom">Olasumbo Bello</span>
+        </div>
+      </div>
+      <div class="two-col">
+        <div class="col">
+          <div class="hymn-title" style="margin-bottom: 2mm">
+            3. OPENING PRAYER <br />
+            <br />
+            4. SCRIPTURE READING
+          </div>
+          <div class="section-heading">5.ANNOUNCEMENT</div>
+          <div class="instruction">The Pastor shall say:</div>
+          <div class="body-text">
+            Dearly beloved, we are gathered here before God and this
+            Congregation, to join together this man and this woman in Holy
+            Matrimony which is an honourable estate established by God before
+            the fall of Man, signifying to us the mystical union between Christ
+            and His Church.
+          </div>
+          <div class="body-text">
+            This Holy estates Christ both honored and beautified with his
+            presence at the wedding in Cana of Galilee where He performed His
+            first miracle. It is also commended by Saint Paul to be of great
+            honour among all men. It is therefore not a thing to be rushed into,
+            or undertaken or instituted lightly to satisfy your carnal lust
+            appetites, like brute beast that have no understanding, but
+            reverently, discreetly, advisedly, soberly and in the fear of GOD,
+            carefully considering the cause for which matrimony was ordained.
+          </div>
+          <div class="subsection-heading">FIRSTLY:</div>
+          <div class="body-text">
+            It was ordained for mutual Companionship, help and comfort that one
+            ought to have of the other both in prosperity and adversity.
+          </div>
+          <div class="subsection-heading">SECONDLY:</div>
+          <div class="body-text">
+            It was ordained for a remedy against sin and to avoid fornication
+            that such person who have not the gift of continency might marry and
+            keep themselves undefiled members of Christ's Body.
+          </div>
+          <div class="subsection-heading">THIRDLY:</div>
+          <div class="body-text">
+            It was ordained for procreation of Children to be brought in the
+            fear of and nature of the Lord of the praise of His Holy Name.
+          </div>
+          <div class="body-text">
+            Into this Holy estate these two persons here present have now come
+            be joined. Therefore, if any man can show any just cause why they
+            may not be lawfully joined together let him now speak or else
+            hereafter forever hold his peace.
+          </div>
+        </div>
+        <div class="col-divider"></div>
+        <div class="col">
+          <div class="hymn-title" style="margin-bottom: 2mm">
+            3. ADURA <br />
+            <br />
+            4. EKO KIKA
+          </div>
+          <div class="section-heading">5. IFILO</div>
+          <div class="instruction">Nigba naa ni Olusoaguntan yo wipe:</div>
+          <div class="body-text">
+            Olufe owon, awa pejo niwaju Oluwa ati ni Oju ijo eniyan Re lati da
+            Okunrin yi ati Obinrin yi po ni igbeyawo mimo ti ise ipo ti o ni ola
+            ti Olorun ti da sile saaju isubu Eniyan. O si je akawe isokan ti o
+            wa laarin Kristi oun ijo Re.
+          </div>
+          <div class="body-text">
+            Ipo mimo yii ni Kristi se loso ti o si se lewa nigbati O lo si ibi
+            Igbeyawo ni Kana ti Galili, ti o si se ise iyanu akose Re nibe. Eyi
+            na ni Poolu si yin pe o ni Ola laarin gbogbo eniyan. Nitorinaa, ki
+            se ohun ti a ba ma kugbu se, ko ye ki a fi owo lee ni airotele bi
+            ohun ti ko wuwo tabi ohun afire se, lati ma te ifekufe ara eniyan
+            lorun, bi eranko ti ko ni iye ninu. Sugbon towotowo, toyetoye,
+            tirotiro, ni pele ati ni iberu Olorun, ki a maa roo bi o ti ye.
+            Nitori idi kini a se da igbeyawo sile?
+          </div>
+          <div class="subsection-heading">IDI KINNI:</div>
+          <div class="body-text">
+            A daa sile fun ajumo kegbe, iranlowo ati itunu ti o ye ki eni kinni
+            ki o ni lodo enikeji, ni irora ati ni iponju.
+          </div>
+          <div class="subsection-heading">IDI KEJI</div>
+          <div class="body-text">
+            A daa sile ki o le se idena si ese ati ki a le ye ona agbere sile.
+            Nitori wipe iru awon eniti ko ni ebun imaraduro, ki won ki o gbeyawo
+            ki won ki o si pa ara won mo ni eya ara Kristi ti ko ni eeri.
+          </div>
+          <div class="subsection-heading">IDI KETA:</div>
+          <div class="body-text">
+            A daa sile nitori Omo bibi ti a o le to ni iberu ati ni eko ti
+            Olorun ati si iyin Oruko Mimo Re.
+          </div>
+          <div><br /></div>
+          <div class="body-text">
+            Ipo mimo yi ni awon eniyan mejeeji yi wa si lati da won po sinu re,
+            nitorina bi enikan bari ohun ikose tooto kan, nitori eyi ti a ki yio
+            fi da won po bi o ti to si nipa ofin ati ilana Olorun ki o wi ni
+            iwoyi bi ko ba si se bee, lati oni lo ki o pa enu re mo titi lae.
+          </div>
+        </div>
+      </div>
+      <div class="page-number">06</div>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+     PAGE 7 — DECLARATION & VOWS
+══════════════════════════════════════════ -->
+    <div class="page">
+      <div class="bg-watermark"></div>
+      <div class="inner-header">
+        <svg class="inner-rings" viewBox="0 0 80 55" fill="none">
+          <circle
+            cx="27"
+            cy="27"
+            r="22"
+            stroke="#7A1010"
+            stroke-width="5"
+            fill="none"
+          />
+          <circle
+            cx="53"
+            cy="27"
+            r="22"
+            stroke="#7A1010"
+            stroke-width="5"
+            fill="none"
+            opacity="0.7"
+          />
+        </svg>
+        <div class="inner-header-name">
+          <span data-name="bride">Oluwaseyi Olaonipekun</span><br />&amp;
+          <span data-name="groom">Olasumbo Bello</span>
+        </div>
+      </div>
+      <div class="two-col">
+        <div class="col">
+          <div class="section-heading">6. DECLARATION</div>
+          <div class="instruction">
+            Pastor's question to the person to be married
+          </div>
+          <div class="instruction">
+            (The Couple remain standing) the Bride shall be unveiled by the
+            groom.
+          </div>
+          <div class="body-text">
+            I require and charge you both, as you will answer, the secret of all
+            hearts shall be disclosed that if either of you knows any
+            impediment, why you may not be lawfully joined together in
+            matrimony, you now have to confess it. For be it known to you that
+            so many as are joined together against the laid down principles in
+            the word of God are not joined together by God and their matrimony
+            is not lawful.
+          </div>
+          <div class="subsection-heading">THE DECLARATION OF THE MAN</div>
+          <div class="body-text">
+            If there is no impediment; the Pastor shall say to the man
+            <strong>USMAN OLASUMBO BELLO</strong> will you have this woman
+            <strong>OLUWASEYI PELUMI OLAONIPEKUN</strong> as your wedded wife,
+            to live together according to God's ordinance in the Holy estate of
+            Matrimony? Will you love Her, comfort Her, honour and keep Her in
+            sickness and in health and forsaking all others, keep yourself only
+            unto Her, so long as you both shall live?
+          </div>
+          <div class="answer-text">
+            The man shall answer: <em>I will by God's Grace</em>
+          </div>
+
+          <div class="subsection-heading">THE DECLARATION OF THE WOMAN</div>
+          <div class="instruction">Then the Pastor shall say to the woman</div>
+          <div class="body-text">
+            <strong>OLUWASEYI PELUMI OLAONIPEKUN</strong> will you have this man
+            <strong>USMAN OLASUMBO BELLO</strong> as your wedded husband, to
+            live together according to God's ordinance in the Holy estate of
+            matrimony? Will you obey Him, serve Him and forsaking all others,
+            keep yourself holy unto him so long as both shall live?
+          </div>
+          <div class="answer-text">
+            The woman shall answer: <em>I will by God's Grace</em>
+          </div>
+          <div class="instruction">
+            Then shall the Pastor say: Who gives this woman to be married to
+            this man?<br />(The father or one of the relations of the woman
+            shall take her by the right hand and hand over to the Pastor)
+          </div>
+        </div>
+        <div class="col-divider"></div>
+        <div class="col">
+          <div class="section-heading">6. IBEERE ATIIDAHUN PELU IJEWO</div>
+          <div class="instruction">(Ni idide duro Oko Ataya)</div>
+          <div class="instruction">
+            Oluso aguntan yoo bere lowo awon ti a fe dapo ni igbeyawo mimo.
+          </div>
+          <div class="body-text">
+            Mo beere lowo eyin mejeeji, bi o ti se pe eyin ni yio dahun ni ojo
+            idajo ti o ni eru pupo, nigbati ohun ikoko okan gbogbo eniyan yoo si
+            sile, bi enikan ninu eyin mejeeji ba mo ohun ikose kan, ti ki yoo je
+            ki a da yin po ni igbeyawo bi o ti ye si nipa ofin, ki o ti iwoyi
+            jewo re, nitori ki o da yin loju pe iye awon ti a ba dapo lodi si bi
+            oro Olorun ti la sile fun ni, Olorun ko da won po bee ni igbeyawo
+            won kii se nipa ofin.
+          </div>
+          <div class="subsection-heading">IJEWO OKUNRIN</div>
+          <div class="body-text">
+            Biko basi ohun ikose; Olusoaguntan yio wi fun Okunrin naa pe USMAN
+            OLASUMBO BELLO se iwo fe gbe obinrin yi OLUWASEYI PELUMI OLAONIPEKUN
+            ni iyawo, ki eyin ki o jumo maa gbe po gege bi idasile Olorun ni ipo
+            mimo igbeyawo? Se iwo o maa fee, iwo o maa tuu ninu? Iwo o maa bu
+            ola fun Iwo yio ma se itoju re ni igba aisan ati ni igba ilera ni?
+            Se iwo gba lati ko gbogbo awon elomiran sile ki iwo ki o si fi ara
+            mo oun nikan soso titi iwon igbati eyin mejeeji yoo wa ni aye?
+          </div>
+          <div class="answer-text">
+            Okunrin naa yoo dahun pe:
+            <em>Beeni, mo fe, ki Olorun ran mi lowo.</em>
+          </div>
+          <div class="subsection-heading">IJEWO OBINRIN</div>
+          <div class="body-text">
+            Omidan OLUWASEYI OLAONIPEKUN PELUMI, se iwo fe ni Okunrin yi USMAN
+            OLASUMBO BELLO ni oko re, ki eyin ki o jumo maa gbe po gege bi
+            idasile Olorun ni ipo mimo igbeyawo? Se iwo o ma gbo tire? Iwo o ma
+            sin in? Iwo o ma fee? Iwo o maa bu ola fun un? Iwo o ma se itoju re
+            nigba aisan ati nigba ilera? Se iwo gba lati ko gbogbo awon elomiran
+            sile ki iwo ki o si fi ara mo oun nikan soso titi iwon igbati eyin
+            mejeeji yoo wa ni aye?
+          </div>
+          <div class="answer-text">
+            Obinrin naa yoo dahun pe:
+            <em>Beeni, mo fe, ki Olorun ran mi lowo.</em>
+          </div>
+          <div class="instruction">
+            Nigbana ni Olusoaguntan yio wipe: Tani o fi Obinrin yi fun Okunrin
+            yi lati gbe ni iyawo?<br />(Baba tabi okan ninu ebi ti won ba yan,
+            yio fa owo otun obinrin naa le Olusoaguntan na lowo)
+          </div>
+        </div>
+      </div>
+      <div class="page-number">07</div>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+     PAGE 8 — THE VOWS
+══════════════════════════════════════════ -->
+    <div class="page">
+      <div class="bg-watermark"></div>
+      <div class="inner-header">
+        <svg class="inner-rings" viewBox="0 0 80 55" fill="none">
+          <circle
+            cx="27"
+            cy="27"
+            r="22"
+            stroke="#7A1010"
+            stroke-width="5"
+            fill="none"
+          />
+          <circle
+            cx="53"
+            cy="27"
+            r="22"
+            stroke="#7A1010"
+            stroke-width="5"
+            fill="none"
+            opacity="0.7"
+          />
+        </svg>
+        <div class="inner-header-name">
+          <span data-name="bride">Oluwaseyi Olaonipekun</span><br />&amp;
+          <span data-name="groom">Olasumbo Bello</span>
+        </div>
+      </div>
+      <div class="two-col">
+        <div class="col">
+          <div class="section-heading">7. The Vows</div>
+          <div class="instruction">
+            (The Pastor shall cause the groom to hold the bride with his right
+            hand and say after the Pastor as follows:)
+          </div>
+          <div class="vow-text">
+            I <strong>USMAN OLASUMBO BELLO</strong> take you,
+            <strong>OLUWASEYI PELUMI OLAONIPEKUN</strong> to be my wedded wife
+            to have and to hold, from this day forward, for the better, for
+            worse, for richer for poorer, in sickness and in health, to love, to
+            cherish and to obey, till death do us part, according to God's
+            ordinance and there to, I pledge you my truth.
+          </div>
+          <div class="instruction">
+            (Then shall the Woman, holding the man's right in her own right
+            hand, say after the Pastor as follows)
+          </div>
+          <div class="vow-text">
+            I <strong>OLUWASEYI PELUMI OLAONIPEKUN</strong> take you,
+            <strong>USMAN OLASUMBO BELLO</strong> to be my wedded husband to
+            have and to hold from this day forward, for poorer, in sickness and
+            in health; to love, to cherish and obey, till death do us part
+            according to God's Holy ordinance and to there to, I pledge you my
+            truth.
+          </div>
+
+          <div class="section-heading" style="margin-top: 4mm">
+            8. Receiving the Holy Bible
+          </div>
+          <div class="instruction">
+            Then shall the two of them hold a New Holy Bible presented by the
+            Man. The Man will say after the Pastor as follows:
+          </div>
+          <div class="vow-text">
+            With this Holy Bible which is the word of God I wed you, with my
+            body, I honour you and all my worldly goods I endow you; in the name
+            of the Father and of the Son and of the Holy Spirit. <br />Amen
+          </div>
+
+          <div class="section-heading" style="margin-top: 4mm">
+            9. Prayer for the Couple
+          </div>
+          <div class="body-text">
+            Then the married couple shall kneel down and the Pastor shall pray
+            for them.
+          </div>
+
+          <div class="section-heading" style="margin-top: 4mm">10. Warning</div>
+          <div class="instruction">
+            Then the Pastor shall join the couple's right hand together and say:
+          </div>
+          <div class="body-text">
+            Those who God has joined, together let no man put asunder. For as
+            much as
+            <strong data-name="groom.formal" data-case="upper"
+              >USMAN OLASUMBO BELLO</strong
+            >
+            and
+            <strong data-name="bride.formal" data-case="upper"
+              >OLUWASEYI PELUMI OLAONIPEKUN</strong
+            >
+            have agreed to live together in Holy Wedlock and have witnessed the
+            same before God and his congregration and thereto have vowed to each
+            other and have declared the same by giving and receiving the Holy
+            Bible, which is the word of God and everlasting witness; and by
+            joining of hands, I pronounce that they be living together as
+            <strong>HUSBAND and WIFE</strong> from today. In the name of the
+            Father and of the Son and of the Holy Ghost. <br />Amen.
+          </div>
+          <div class="hymn-title" style="margin-bottom: 2mm">
+            11. Choir Ministration — Choir, CAC Oke-Alafia, Ashi, Bodija.<br />12.
+            Sermon <br />13. Prayer<br />14.Signing of Marriage Certificates
+            <br />15. Announcement<br />16. Thanksgiving
+          </div>
+        </div>
+        <div class="col-divider"></div>
+        <div class="col">
+          <div class="section-heading">7. Isowopo ati Ibukun (Sise Adehun)</div>
+          <div class="instruction">
+            Olusoaguntan yio fa obinrin naa le okunrin na lowo. Okunrin yi o fi
+            owo otun re di owo otun obinrin naamu; yio si ma wi tele
+            Olusoaguntan wipe:
+          </div>
+          <div class="vow-text">
+            Emi <strong>Usman OLASUMBO BELLO</strong> gba iwo
+            <strong>OLUWASEYI PELUMI OLAONIPEKUN</strong> ni aya mi, lati ni,
+            lati mu, lati oni lo, ti ibi ti ire, ni iloro ati ni iponju, ninu
+            aisan ati ni ilera, lati fe ati lati ke, titi iku yio fi ya wa gege
+            bi idasile mimo Olorun, si eyi mo fi otito mi fun o.
+          </div>
+          <div class="instruction">
+            (Obirin naa yio fi owo otun re di owo otun Okunrin naa mu, yio si ma
+            wi tele Olusoaguntan:)
+          </div>
+          <div class="vow-text">
+            Emi <strong>OLUWASEYI PELUMIOLAONIPEKUN</strong> gba iwo
+            <strong>USMAN OLASUMBO BELLO</strong> ni oko mi, lati ni, lati mu,
+            lati oni lo, ti ibi ti ire, ni iloro ati ni iponju, ninu aisan ati
+            ni ilera, lati fe ati lati ke, ati lati gbo tire titi iku yio fi ya
+            wa gege bi idasile mimo Olorun, si eyi mo fi otito mi fun o.
+          </div>
+
+          <div class="section-heading" style="margin-top: 4mm">
+            8. Gbigba Bibeli Mimo
+          </div>
+          <div class="instruction">
+            Nigbana ni okunrin yio fi BIBELI titun kan fun obirin naa. Awon
+            mejeeji yio si jumo di mu. Okunrin yio si ma wi tele Olusoaguntan
+            wipe:
+          </div>
+          <div class="vow-text">
+            Bibeli mimo yi, ti se oro Olorun ni mo fi ba o gbeyawo, ara mi ni
+            emi o ma fi bu ola fun o ati ohun aye mi gbogbo ni emi o ma fi ke o.
+            Li Oruko Baba ati ni ti Omo ati ni ti Emi Mimo.<br />
+            Amin.
+          </div>
+
+          <div class="section-heading" style="margin-top: 4mm">
+            9. Adura fun Tokotaya
+          </div>
+          <div class="body-text">
+            Tokotaya yoo kunle ti Olusoaguntan yoo si gbadura fun won.
+          </div>
+
+          <div class="section-heading" style="margin-top: 4mm">10. Ikilo</div>
+          <div class="instruction">
+            Nigbana ni Alufa yio da owo otun won po. Yio si wi pe:
+          </div>
+          <div class="body-text">
+            Awon eniti Olorun ba ti so po sokan, ki enikeni o mase ya won. Niwon
+            bi <strong>USMAN OLASUMBO BELLO</strong> ati
+            <strong>OLUWASEYI PELUMI OLAONIPEKUN</strong> ti jumo fi ohun sokan
+            ni igbeyawo mimo, ti wo si jewo eyi niwaju Olorun ati ijo yi, ati si
+            eyi na ti won si fi otito okan se adehun larin ara won ti won, ti
+            won si ti fi otito won fun ara won, ti won si fi eyi han ni fifun ni
+            ati gbigba Bibeli Mimo ti se oro Olorun ati eleri ayeraye ati ni
+            idawopo, mo so pe ki won ki o ma gbe po ni toko taya lati oni lo ni
+            Oruko Baba ati ni ti Omo ati ni ti Emi Mimo. <br />Amin
+          </div>
+          <p><br /><br /><br /></p>
+          <div class="hymn-title">
+            11. Orin Adako — Akorin CAC Oke-Alafia, Ashi, Bodija.<br />12.
+            Iwaasu <br />13. Adura Leyin Iwaasu<br />14. Fifi Owo Si Iwe Eri
+            Igbeyawo<br />15. Ifilo<br />16. Idupe Igbeyawo
+          </div>
+        </div>
+      </div>
+      <div class="page-number">08</div>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+     PAGE 9 — CLOSING HYMN
+══════════════════════════════════════════ -->
+    <div class="page">
+      <div class="bg-watermark"></div>
+      <div class="inner-header">
+        <svg class="inner-rings" viewBox="0 0 80 55" fill="none">
+          <circle
+            cx="27"
+            cy="27"
+            r="22"
+            stroke="#7A1010"
+            stroke-width="5"
+            fill="none"
+          />
+          <circle
+            cx="53"
+            cy="27"
+            r="22"
+            stroke="#7A1010"
+            stroke-width="5"
+            fill="none"
+            opacity="0.7"
+          />
+        </svg>
+        <div class="inner-header-name">
+          <span data-name="bride">Oluwaseyi Olaonipekun</span><br />&amp;
+          <span data-name="groom">Olasumbo Bello</span>
+        </div>
+      </div>
+      <div class="two-col">
+        <div class="col">
+          <div class="hymn-title">Closing Hymn – GHB Various 13</div>
+          <div class="hymn-subtitle">God Give Us Christian Homes</div>
+          <div class="hymn-verse">
+            <div class="verse-num">1.</div>
+            <div class="verse-lines">
+              God give us Christian homes!<br />Homes where the Bible is loved
+              and taught<br />Homes where the Master's will is sought<br />Homes
+              crowned with beauty your love has wrought;<br />God give us
+              Christian homes,<br />God give us Christian homes!
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">2.</div>
+            <div class="verse-lines">
+              God give us Christian homes!<br />Homes where the father is true
+              and strong<br />Homes that are free from the blight of wrong.<br />Homes
+              that are joyous with love and song;<br />God give us Christian
+              homes!<br />God give us Christian homes!
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">3.</div>
+            <div class="verse-lines">
+              God give us Christian homes!<br />Homes where the mother is caring
+              and best<br />Strives to show others your way is best,<br />Homes
+              where the Lord is an honoured guest,<br />God give us Christian
+              homes!<br />God give us Christian homes!
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">4.</div>
+            <div class="verse-lines">
+              God give us Christian homes!<br />Home where the children are led
+              to know<br />Christ in His beauty who loves them so<br />Homes
+              where the altar fires burn and glow;<br />God give us Christian
+              homes!<br />God give us Christian homes!<br />Amen
+            </div>
+          </div>
+        </div>
+        <div class="col-divider"></div>
+        <div class="col">
+          <div class="hymn-title">Orin Ipari Isin – Oniruru 13</div>
+          <div class="hymn-subtitle">Fun wa ni'le Kristiani</div>
+          <div class="hymn-verse">
+            <div class="verse-num">1.</div>
+            <div class="verse-lines">
+              Fun wa nile Kristiani<br />Ile ti a nkeko Bibeli<br />Ile ti a
+              nlepa 'fe Baba<br />'Le tife Re f'ewa de lade<br />Olorun Baba
+              wa<br />Fun wa ni'le Kristiani
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">2.</div>
+            <div class="verse-lines">
+              Fun wa ni'le Kristiani<br />Nibi ti bale je olooto<br />Ile to bo
+              lowo asise<br />Ile ti nyo fun ife at'orin<br />Olorun Baba wa<br />Fun
+              wa ni'le Kristiani
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">3.</div>
+            <div class="verse-lines">
+              Fun wa nile Kristiani<br />Nibit'iya ile b'ayaba<br />Nfihan p'ona
+              RE lo dara ju<br />Ile t'a gb'Olugbala l'aaye<br />Olorun Baba
+              wa<br />Fun wa ni'le Kristiani
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">4.</div>
+            <div class="verse-lines">
+              Fun wa nile Kristiani<br />Nibiti a nto awon 'mode<br />L'ati mo
+              Kristi to feran won<br />Ile ti a ntanna adura<br />Olorun Baba
+              wa<br />Fun wa ni'le Kristiani. <br />Amin
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-number">09</div>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+     PAGE 10 — RECESSIONAL HYMN
+══════════════════════════════════════════ -->
+    <div class="page">
+      <div class="bg-watermark"></div>
+      <div class="inner-header">
+        <svg class="inner-rings" viewBox="0 0 80 55" fill="none">
+          <circle
+            cx="27"
+            cy="27"
+            r="22"
+            stroke="#7A1010"
+            stroke-width="5"
+            fill="none"
+          />
+          <circle
+            cx="53"
+            cy="27"
+            r="22"
+            stroke="#7A1010"
+            stroke-width="5"
+            fill="none"
+            opacity="0.7"
+          />
+        </svg>
+        <div class="inner-header-name">
+          <span data-name="bride">Oluwaseyi Olaonipekun</span><br />&amp;
+          <span data-name="groom">Olasumbo Bello</span>
+        </div>
+      </div>
+      <div class="two-col">
+        <div class="col">
+          <div class="hymn-title">Recessional Hymn – GHB 627</div>
+          <div class="hymn-subtitle">My Hope is Built on Nothing Less</div>
+          <div class="hymn-verse">
+            <div class="verse-num">1.</div>
+            <div class="verse-lines">
+              My hope is built on nothing less<br />Than Jesus blood and
+              righteousness.<br />I dare not trust the sweetest frame,<br />But
+              wholly trust in Jesus' Name.
+            </div>
+            <div class="chorus">
+              On Christ the solid Rock I stand,<br />All other ground is sinking
+              sand;<br />All other ground is sinking sand.
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">2.</div>
+            <div class="verse-lines">
+              When darkness seems to hide His face,<br />I rest on His
+              unchanging grace.<br />In every high and stormy gale,<br />My
+              anchor holds within the veil.
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">3.</div>
+            <div class="verse-lines">
+              His oath, His covenant, His blood,<br />Support me in the whelming
+              flood.<br />When all around my soul gives way,<br />He then is all
+              my Hope and Stay.
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">4.</div>
+            <div class="verse-lines">
+              When He shall come with trumpet sound,<br />Oh may I then in Him
+              be found.<br />Dressed in His righteousness alone,<br />Faultless
+              to stand before the throne.
+            </div>
+          </div>
+        </div>
+        <div class="col-divider"></div>
+        <div class="col">
+          <div class="hymn-title">Orin Akojade – I.O.I.627</div>
+          <div class="hymn-subtitle">Igbagbo mi duro l'ori</div>
+          <div class="hymn-verse">
+            <div class="verse-num">1.</div>
+            <div class="verse-lines">
+              Igbagbo mi duro l'ori<br />Eje at'ododo Jesu,<br />Nko je gbekele
+              ohun kan,<br />Leyin oruko nla Jesu.
+            </div>
+            <div class="chorus">
+              Mo duro le Kristi Apata,<br />Ile miran, iyanrin ni.
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">2.</div>
+            <div class="verse-lines">
+              B'ire-ije mi tile gun<br />
+              Ore ofe Re koyi pada;<br />B'o ti wu ki iji na le to<br />Idakoro
+              mi ko ni ye.
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">3.</div>
+            <div class="verse-lines">
+              Majemu, ati eje Re.<br />Le m'oro mo, bi 'kun mide;<br />'Gbati'
+              ko s'atileyin mo<br />On je ireti nla fun mi.
+            </div>
+          </div>
+          <div class="hymn-verse">
+            <div class="verse-num">4.</div>
+            <div class="verse-lines">
+              'Gbat' ipe 'keyin ba si dun,<br />A! mba le wa ninu Jesu<br />Ki
+              nwo ododo Re nikan<br />Ki nduro niwaju ite.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-number">10</div>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+     PAGE 11 — ORDER OF PHOTOGRAPH
+══════════════════════════════════════════ -->
+    <div class="page">
+      <div class="bg-watermark"></div>
+      <div class="inner-header">
+        <svg class="inner-rings" viewBox="0 0 80 55" fill="none">
+          <circle
+            cx="27"
+            cy="27"
+            r="22"
+            stroke="#7A1010"
+            stroke-width="5"
+            fill="none"
+          />
+          <circle
+            cx="53"
+            cy="27"
+            r="22"
+            stroke="#7A1010"
+            stroke-width="5"
+            fill="none"
+            opacity="0.7"
+          />
+        </svg>
+        <div class="inner-header-name">
+          <span data-name="bride">Oluwaseyi Olaonipekun</span><br />&amp;
+          <span data-name="groom">Olasumbo Bello</span>
+        </div>
+      </div>
+      <div class="photo-page">
+        <!-- Camera SVG decoration -->
+        <svg
+          width="80"
+          height="60"
+          viewBox="0 0 80 60"
+          fill="none"
+          style="opacity: 0.12; margin-bottom: 6mm"
+        >
+          <rect
+            x="5"
+            y="15"
+            width="70"
+            height="40"
+            rx="6"
+            stroke="#7A1010"
+            stroke-width="3"
+          />
+          <circle cx="40" cy="35" r="12" stroke="#7A1010" stroke-width="3" />
+          <circle cx="40" cy="35" r="6" stroke="#7A1010" stroke-width="2" />
+          <rect
+            x="28"
+            y="8"
+            width="24"
+            height="10"
+            rx="3"
+            stroke="#7A1010"
+            stroke-width="2"
+          />
+          <circle cx="62" cy="22" r="3" fill="#7A1010" />
+        </svg>
+
+        <div class="page-title">Order of Photograph</div>
+        <div class="photo-label">Couple with</div>
+        <ul class="photo-list" style="display: inline-block; text-align: left">
+          <li><span class="pnum">1.</span> Officiating Ministers</li>
+          <li><span class="pnum">2.</span> Both Parents</li>
+          <li><span class="pnum">3.</span> Groom's Parents</li>
+          <li><span class="pnum">4.</span> Bride's Parents</li>
+          <li><span class="pnum">5.</span> Bride's Family</li>
+          <li><span class="pnum">6.</span> Groom's Family</li>
+          <li><span class="pnum">7.</span> Both Families</li>
+          <li><span class="pnum">8.</span> Groom's Siblings</li>
+          <li><span class="pnum">9.</span> Bride's Siblings</li>
+          <li><span class="pnum">10.</span> Best Man &amp; Chief Bridesmaid</li>
+          <li><span class="pnum">11.</span> Groom's Friends</li>
+          <li><span class="pnum">12.</span> Bride's Friends</li>
+          <li><span class="pnum">13.</span> Bride's Maids</li>
+          <li><span class="pnum">14.</span> Groom's Men</li>
+          <li><span class="pnum">15.</span> All Friends and Well Wishers</li>
+          <li><span class="pnum">16.</span> Couple Alone</li>
+        </ul>
+      </div>
+      <div class="page-number">15</div>
+    </div>
+
+    <script>
+      (function () {
+        const couple = {
+          bride: {
+            common: "Oluwaseyi Olaonipekun",
+            formal: "Oluwaseyi Pelumi Olaonipekun",
+          },
+          groom: {
+            common: "Olasumbo Bello",
+            formal: "Usman Olasumbo Bello",
+          },
+        };
+
+        document.title = `Order of Programme – ${couple.bride.common} & ${couple.groom.common}`;
+
+        document.querySelectorAll("[data-name]").forEach((el) => {
+          const [who, variant = "common"] = el.dataset.name.split(".");
+          let value = (couple[who] && couple[who][variant]) || "";
+          if (el.dataset.case === "upper") value = value.toUpperCase();
+          el.textContent = value;
+        });
+      })();
+    </script>
+  </body>
+</html>
